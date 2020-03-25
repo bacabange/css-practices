@@ -8,8 +8,10 @@ body {
   display: grid;
   width: 100%;
   border: solid 1px red;
-  grid-template-columns: repeat(4, [sm] 1fr [lg] 2fr);
-  grid-template-rows: repeat(5, 50px);
+  grid-template-areas: "one one one two" "one one one two" ". . four four" "three three four four";
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 100px);
 }
 
 .item {
@@ -19,6 +21,28 @@ body {
 .grid > * {
   border: solid 1px blue;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.grid > .five {
+  background-color: orange;
+  grid-row: one-start/three-end;
+  grid-column: three-start/four-start;
 }
 
 /*# sourceMappingURL=main.css.map */
