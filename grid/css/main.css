@@ -8,11 +8,16 @@ body {
   display: grid;
   width: 100%;
   border: solid 1px red;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: [full-start] 1fr [main-start] 2fr 2fr [main-end full-end];
+}
+
+.item {
+  grid-column: main-start/main-end;
 }
 
 .grid > * {
   border: solid 1px blue;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /*# sourceMappingURL=main.css.map */
