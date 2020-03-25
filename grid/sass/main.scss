@@ -2,17 +2,23 @@
 
 body {
   background: #fff;
+  color: #333;
   font-size: 16px;
 }
 
 .grid {
   display: grid;
-  width: 50%;
+  width: 100%;
   border: solid 1px red;
+  // grid-template-columns: 100px 200px 100px;
+  // grid-template-columns: min-content max-content fit-content(10em);
   // grid-template-columns: 50% 50%;
   // grid-template-columns: min-content max-content fit-content(10em);
-  // grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: 10em 1fr;
+  // grid-template-columns: 1fr 1fr 1fr 2fr;
+  // grid-template-columns: 30px 1fr 1fr 1fr;
+  // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  // grid-template-columns: [full-start] 1fr [content-start] 3fr [content-end] 1fr [full-end];
+  grid-template-columns: fit-content(300px) 1fr;
 }
 
 .grid > * {
