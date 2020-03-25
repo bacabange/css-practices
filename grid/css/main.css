@@ -8,11 +8,12 @@ body {
   display: grid;
   width: 100%;
   border: solid 1px red;
-  grid-template-columns: [full-start] 1fr [main-start] 2fr 2fr [main-end full-end];
+  grid-template-columns: repeat(4, [sm] 1fr [lg] 2fr);
+  grid-template-rows: repeat(5, 50px);
 }
 
 .item {
-  grid-column: main-start/main-end;
+  grid-column: 3/span 4;
 }
 
 .grid > * {

@@ -39,7 +39,11 @@ body {
   // grid-template-rows: repeat(5, 50px);
 
   // with names
-  grid-template-columns: [full-start] 1fr [main-start] 2fr 2fr [main-end full-end];
+  // grid-template-columns: [full-start] 1fr [main-start] 2fr 2fr [main-end full-end];
+
+  // con nombres repetidos
+  grid-template-columns: repeat(4, [sm] 1fr [lg] 2fr);
+  grid-template-rows: repeat(5, 50px);
 
 }
 
@@ -51,7 +55,12 @@ body {
   // grid-area: 2 / 2 / 5 / 5;
 
   // with names
-  grid-column: main-start / main-end;
+  // grid-column: main-start / main-end;
+
+  // grid-column: sm 1 / lg 2;
+  // grid-row: 1 / 4;
+  // Con span coge la posición 1 desde start (3) y de ahí cuenta los span 4
+  grid-column: 3 / span 4;
 }
 
 .grid > * {
