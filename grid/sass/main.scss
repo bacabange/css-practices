@@ -18,7 +18,21 @@ body {
   // grid-template-columns: 30px 1fr 1fr 1fr;
   // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   // grid-template-columns: [full-start] 1fr [content-start] 3fr [content-end] 1fr [full-end];
-  grid-template-columns: fit-content(300px) 1fr;
+  // grid-template-columns: fit-content(300px) 1fr;
+
+  // its the same sentence to create a container with 12 fractions:
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  // grid-template-columns: repeat(12, 1fr);
+  // grid-template-columns: 1fr repeat(3,100px) 1fr
+
+  // divir los elementos en columnas de 200px, cada vez que se achica el contenedor, los items pasan a la linea siguiente
+  // grid-template-columns: repeat(auto-fill, 200px);
+
+  // Autocrear las columnas, con un ancho minimo de 200px y si sobra espacio queda el último item con el ancho sobrante del contenedor
+  // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  // Autocrear las columnas, con un ancho minimo de 200px y si no hay más items, toma el ancho del contenedor
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .grid > * {
